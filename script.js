@@ -96,7 +96,7 @@ function generatePDF() {
 
         // Texto dinámico para "DE: ALASKA FASHION"
         const staticText = [
-            "ALASKA FASHION  RUC:803138.800-7",
+            "ALASKA FASHION  RUC:80.138.800-7",
             "0984 11 33 77  - ENCARNACION, PY",
             "¡MUCHAS GRACIAS POR LA PREFERENCIA!"
         ];
