@@ -1,0 +1,135 @@
+/* Reset general de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y disposición del body */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: flex;
+    justify-content: center;  /* Centrado horizontal */
+    align-items: center;      /* Centrado vertical */
+    min-height: 100vh;         /* Asegura que el body ocupe toda la altura */
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;             /* Reducción del padding */
+}
+
+/* Contenedor principal para el ticket y la vista previa */
+.ticket-container, .preview-container {
+    width: 100%;
+    max-width: 600px;  /* Limita el ancho máximo */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;  /* Ajuste de padding */
+}
+
+/* Estilo para el encabezado del ticket */
+.ticket-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Reducción del espacio entre el logo y el título */
+    margin-bottom: 15px;  /* Reducir margen inferior */
+    font-size: 1.2em;     /* Tamaño de fuente reducido */
+    color: #333;
+    font-weight: 600;
+}
+
+/* Estilo para el logo en el encabezado */
+.logo {
+    width: 25px;  /* Tamaño reducido */
+    height: 25px;
+}
+
+/* Estilo de los grupos de formularios */
+.form-group {
+    margin-bottom: 10px;  /* Reducción del espacio entre campos */
+}
+
+/* Estilo de las etiquetas dentro de los formularios */
+label {
+    display: block;
+    margin-bottom: 4px;  /* Reducir margen debajo de las etiquetas */
+    font-size: 0.95em;   /* Tamaño de fuente reducido */
+    font-weight: 500;
+    color: #555;
+}
+
+/* Estilo de los inputs */
+input {
+    width: 100%;
+    padding: 8px;         /* Ajuste del padding */
+    font-size: 0.9em;     /* Fuente más pequeña */
+    margin-bottom: 10px;  /* Reducción del espacio entre inputs */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilo de los inputs al recibir foco */
+input:focus {
+    border-color: #4e8e9e;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Estilo de los botones */
+button {
+    padding: 8px 14px;  /* Reducir el tamaño del botón */
+    background-color: #4e8e9e;
+    color: #fff;
+    font-size: 0.9em;   /* Fuente más pequeña */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo del botón al hacer hover */
+button:hover {
+    background-color: #3b7372;
+}
+
+/* Estilo para las tablas o cajas de contenido */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;  /* Reducción del espacio superior */
+}
+
+th, td {
+    padding: 10px;      /* Reducir el padding de las celdas */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las filas de las tablas */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo de las celdas en la tabla con etiquetas y valores */
+th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Estilo para las celdas de datos */
+td {
+    color: #666;
+}
+
+/* Estilo de los enlaces (si los hubiera) */
+a {
+    color: #4e8e9e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

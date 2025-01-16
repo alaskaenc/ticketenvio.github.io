@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Ticket de Envío</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="ticket-container">
+        <div class="ticket-header">
+            <img src="https://raw.githubusercontent.com/alaskaenc/codigos/main/ALASKA%20FASHION%20-%20PNG%202023%20NEGRO.png" alt="Logo" class="logo">
+            <h2>Ticket de Envío - Alaska Fashion 2025</h2>
+        </div>
+    
+        <form id="ticketForm">
+            <div class="form-group">
+                <label for="boleta">Número de Boleta</label>
+                <input type="text" id="boleta" name="boleta" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="text" id="fecha" name="fecha" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nombre">A NOMBRE DE:</label>
+                <input type="text" id="nombre" name="nombre" required oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+                <label for="destino">DESTINO:</label>
+                <input type="text" id="destino" name="destino" required oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+                <label for="direccion">DIRECCIÓN:</label>
+                <input type="text" id="direccion" name="direccion" required oninput="updatePreview()">
+            </div>
+            <div class="form-group">
+                <label for="telefono">TELÉFONO:</label>
+                <input type="text" id="telefono" name="telefono" required oninput="updatePreview()">
+            </div>
+            <button type="button" class="btn" onclick="generatePDF()">Generar Ticket</button>
+        </form>
+    </div>
+    
+    </div>
+</body>
+</html>
