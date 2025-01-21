@@ -41,6 +41,11 @@
                 <label for="telefono">TELÉFONO:</label>
                 <input type="text" id="telefono" name="telefono" required oninput="updatePreview()">
             </div>
+            <div class="form-group">
+                <label for="ciRuc">C.I./RUC:</label>
+                <input type="text" id="ciRuc" name="ciRuc" required oninput="updatePreview()">
+            </div>
+            
             <button type="button" class="btn" onclick="generatePDF()">Generar Ticket</button>
         </form>
     </div>
