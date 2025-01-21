@@ -25,8 +25,9 @@ function generatePDF() {
     const destino = document.getElementById("destino").value;
     const direccion = document.getElementById("direccion").value;
     const boleta = document.getElementById("boleta").value;
+    const ciRuc = document.getElementById("ciRuc").value; // Captura el valor del campo C.I./RUC
 
-    if (!nombre || !telefono || !destino || !direccion) {
+    if (!nombre || !telefono || !destino || !direccion || !ciRuc) {
         alert("Por favor, completa todos los campos requeridos.");
         return;
     }
@@ -51,6 +52,7 @@ function generatePDF() {
             { label: "FECHA:", value: fecha },
             { label: "NÚMERO DE BOLETA:", value: boleta },
             { label: "DESTINATARIO:", value: nombre },
+            { label: "C.I./RUC:", value: ciRuc }, // Agregar el nuevo campo al PDF
             { label: "TELÉFONO:", value: telefono },
             { label: "DESTINO:", value: destino },
             { label: "DIRECCIÓN:", value: direccion }
@@ -96,7 +98,7 @@ function generatePDF() {
 
         // Texto dinámico para "DE: ALASKA FASHION"
         const staticText = [
-            "ALASKA FASHION  RUC:80.138.800-7",
+            "ALASKA FASHION  RUC:803138.800-7",
             "0984 11 33 77  - ENCARNACION, PY",
             "¡MUCHAS GRACIAS POR LA PREFERENCIA!"
         ];
@@ -121,8 +123,12 @@ function generatePDF() {
 
         pdf.save(`ticket_envio_${boleta}.pdf`);
 
+        // Asegurarse de que el número de boleta se actualice correctamente
+        const nextBoleta = getNextBoleta();
+        document.getElementById("boleta").value = nextBoleta;
+
         document.getElementById("ticketForm").reset();
-        document.getElementById("boleta").value = getNextBoleta();
+        document.getElementById("boleta").value = nextBoleta; // Restablecer número de boleta en el formulario
         updatePreview();
     };
 
